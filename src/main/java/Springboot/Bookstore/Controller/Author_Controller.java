@@ -31,10 +31,19 @@ public class Author_Controller {
         AuthorModel a1 = authService1.insertAuth(authName);
         return new ResponseEntity<AuthorModel>(a1, HttpStatus.OK);
     }
-
+// Difference between @PathVariable------ vs ------  @RequestParam
+    // @RequestParam use ---> http://localhost:8080/api/bookstore/author/ID?authID=4
     @GetMapping("/author/ID") // GET find by ID .... POSTMAN<int ID>
     @ResponseBody
-    public ResponseEntity<AuthorModel> findAuthBYid(@RequestParam("authID") int authID) {
+    public ResponseEntity<AuthorModel> findAuthBYid1(@RequestParam(value = "authID") int authID) {
+        AuthorModel a1 = authService1.findAuthBYid(authID);
+        return new ResponseEntity<AuthorModel>(a1, HttpStatus.OK);
+    }
+// Difference between @PathVariable------ vs ------  @RequestParam
+    // @PathVariable use ---> http://localhost:8080/api/bookstore/author/ID/4
+    @GetMapping("/author/ID/{authID}") // GET find by ID .... POSTMAN<int ID>
+    @ResponseBody
+    public ResponseEntity<AuthorModel> findAuthBYid2(@PathVariable(value = "authID") int authID) {
         AuthorModel a1 = authService1.findAuthBYid(authID);
         return new ResponseEntity<AuthorModel>(a1, HttpStatus.OK);
     }

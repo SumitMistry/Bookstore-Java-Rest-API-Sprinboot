@@ -1,7 +1,9 @@
 package Springboot.Bookstore.Controller;
 
+import Springboot.Bookstore.Services.Login_Authentication_Services;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +13,14 @@ import org.springframework.web.bind.annotation.*;
 public class Login_Controller {
 
     private Logger logger_controller = LoggerFactory.getLogger(Login_Controller.class);
+
+    private Login_Authentication_Services login_authentication_services;
+
+    // we dont need to autowire this constructor, Spring will automatically take care of adding ....
+    //              Login_Authentication_Services...
+    Login_Controller(Login_Authentication_Services logn_auth_Servi){
+        this.login_authentication_services = logn_auth_Servi;
+    }
 
 /////////////// GET       + JSP VIEW     // ready-made HTML template here
     @RequestMapping(value = "/login0", method = RequestMethod.GET)
@@ -53,17 +63,37 @@ public class Login_Controller {
     }
 
 
-    ///////////////     Basic Form  + JSP VIEW + POST
-    @RequestMapping(value = "/login4")
-    public String login4(){
-        //logger_controller.info("    Running: login4()");
-        return "login4";  //this is returning login4.jsp  RETURNS(VIEW).
+///////////////     Basic Form  + JSP VIEW  + GET() + POST() + ModelMapping
+    ///////////     GET specific below
+    @RequestMapping(value = "/login4", method = RequestMethod.GET)
+    public String login4_get(){
+        logger_controller.info("    Running: login4_get()");
+        return "login4_get";  //this is returning login4.jsp  RETURNS(VIEW).
         // This login4.jsp form has <Form method= "post">
+    }
+    // same as above method, but handling only POST side
+    ///////////     POST specific below
+    @RequestMapping(value = "/login4", method = RequestMethod.POST)
+    public String login4_post(@RequestParam String uid, @RequestParam String pass, ModelMap modelMap){
+
+        // Authentication BASIC logic set in SERVICES:
+        boolean goAheadOrNOT = login_authentication_services.authenticate_basic1(uid,pass);
+        logger_controller.info("    Running: login4_post()+  Authentication Validation indicator" + goAheadOrNOT);
+        if(goAheadOrNOT == false){
+            modelMap.put( "message", "AUTH FAILED ");
+            return "login4_get";
+        }
+        else{
+            modelMap.put( "message", "Successful...");
+            modelMap.put("uid",uid);
+            modelMap.put("pass",pass);
+            logger_controller.info("    uid="+ uid+"   pass="+pass + modelMap );
+            return "login4_post";  //this is returning logn4_post.jsp  RETURNS(VIEW).
+        }
 
     }
 
 
-
-    ///////////////     MODEL + Front Controller + JSP VIEW
+//////////////     MODEL + Front Controller + JSP VIEW
 
 }
