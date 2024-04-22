@@ -1,5 +1,5 @@
 <html>
-<Head> <title> draft3 Login page </title> </head>
+<Head> <title> draft3 modelMap </title> </head>
 <body>
             <!-- this is coming from : Login_Controller::login3(): modelMap.put( "uid_holder", uid) -->
              User is passing the value of uid =   <h1> ${uid_holder} </h1>
