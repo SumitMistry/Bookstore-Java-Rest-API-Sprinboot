@@ -1,0 +1,1681 @@
+{
+	"info": {
+		"_postman_id": "4bbd6052-f3a5-4b0a-879f-8d99bde7a0ef",
+		"name": "BookStore / Collin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29757316"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "GET_getAllCatego",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://localhost:8080/api/bookstore/category"
+					},
+					"response": [
+						{
+							"name": "GET_getAllCatego",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": "http://localhost:8080/api/bookstore/category"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 03:46:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"cat_id\": 1,\n        \"name\": \"ficntioonn\"\n    },\n    {\n        \"cat_id\": 2,\n        \"name\": \"TwoCAttt\"\n    },\n    {\n        \"cat_id\": 3,\n        \"name\": \"Horror\"\n    },\n    {\n        \"cat_id\": 4,\n        \"name\": \"Horror,Smasshh\"\n    },\n    {\n        \"cat_id\": 5,\n        \"name\": \"thrillerrrr\"\n    },\n    {\n        \"cat_id\": 6,\n        \"name\": \"thrillerrrr\"\n    },\n    {\n        \"cat_id\": 7,\n        \"name\": \"thrillerrrr\"\n    },\n    {\n        \"cat_id\": 8,\n        \"name\": \"thrillerrrr\"\n    },\n    {\n        \"cat_id\": 9,\n        \"name\": \"thrillerrrr\"\n    },\n    {\n        \"cat_id\": 10,\n        \"name\": \"show1\"\n    },\n    {\n        \"cat_id\": 11,\n        \"name\": \"Test009\"\n    },\n    {\n        \"cat_id\": 12,\n        \"name\": \"Test008\"\n    },\n    {\n        \"cat_id\": 13,\n        \"name\": \"Test007\"\n    },\n    {\n        \"cat_id\": 14,\n        \"name\": \"Test007\"\n    },\n    {\n        \"cat_id\": 15,\n        \"name\": \"Test007\"\n    },\n    {\n        \"cat_id\": 19,\n        \"name\": \"Fantasy\"\n    },\n    {\n        \"cat_id\": 20,\n        \"name\": \"Adventure\"\n    },\n    {\n        \"cat_id\": 21,\n        \"name\": \"Romance\"\n    },\n    {\n        \"cat_id\": 22,\n        \"name\": \"Fantasy\"\n    },\n    {\n        \"cat_id\": 23,\n        \"name\": \"Adventure\"\n    },\n    {\n        \"cat_id\": 24,\n        \"name\": \"Romance\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "POST_insertCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "CatID",
+									"value": "show2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "catName",
+									"value": "Test007",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8080/api/bookstore/category",
+						"description": "to POST, go to --> and put data here from @paramvalue put value key here and put value from user"
+					},
+					"response": [
+						{
+							"name": "POST_insertCategory",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "CatID",
+											"value": "show2",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "catName",
+											"value": "Test007",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:8080/api/bookstore/category"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 03:47:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cat_id\": 26,\n    \"name\": \"Test007\"\n}"
+						}
+					]
+				},
+				{
+					"name": "POST_findCatebyIDfromPOSTMAN",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "catID",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/bookstore/category/ID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"bookstore",
+								"category",
+								"ID"
+							],
+							"query": [
+								{
+									"key": "2",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST_findCatebyIDfromPOSTMAN",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "catID",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/bookstore/category/ID",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"bookstore",
+										"category",
+										"ID"
+									],
+									"query": [
+										{
+											"key": "2",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 03:47:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cat_id\": 2,\n    \"name\": \"TwoCAttt\"\n}"
+						}
+					]
+				},
+				{
+					"name": "POST_insertCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "catName",
+									"value": "Unknown12",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8080/api/bookstore/category"
+					},
+					"response": [
+						{
+							"name": "POST_insertCategory",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "catName",
+											"value": "Unknown12",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:8080/api/bookstore/category"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 03:47:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cat_id\": 27,\n    \"name\": \"Unknown12\"\n}"
+						}
+					]
+				},
+				{
+					"name": "POST_UpdateCategoryBYid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "newCat",
+									"value": "TwoCAttt",
+									"type": "text"
+								},
+								{
+									"key": "catID",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8080/api/bookstore/category/update"
+					},
+					"response": [
+						{
+							"name": "POST_UpdateCategoryBYid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "newCat",
+											"value": "TwoCAttt",
+											"type": "text"
+										},
+										{
+											"key": "catID",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:8080/api/bookstore/category/update"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 03:47:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cat_id\": 2,\n    \"name\": \"TwoCAttt\"\n}"
+						}
+					]
+				},
+				{
+					"name": "POST_deletebyID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "catID",
+									"value": "16",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8080/api/bookstore/category/delete"
+					},
+					"response": [
+						{
+							"name": "POST_deletebyID",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "catID",
+											"value": "16",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:8080/api/bookstore/category/delete"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 03:47:31 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "\n \n \n book_table:0    category_table:0"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Author",
+			"item": [
+				{
+					"name": "GET_getAllAuth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/bookstore/author"
+					},
+					"response": [
+						{
+							"name": "GET_getAllAuth",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/bookstore/author"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 03:46:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"authorID\": 1,\n        \"authorNAme\": \"sumitt123\"\n    },\n    {\n        \"authorID\": 2,\n        \"authorNAme\": \"Harsh\"\n    },\n    {\n        \"authorID\": 3,\n        \"authorNAme\": \"JapanBook\"\n    },\n    {\n        \"authorID\": 4,\n        \"authorNAme\": \"Holika\"\n    },\n    {\n        \"authorID\": 6,\n        \"authorNAme\": \"Jennifer\"\n    },\n    {\n        \"authorID\": 7,\n        \"authorNAme\": \"Shiela\"\n    },\n    {\n        \"authorID\": 8,\n        \"authorNAme\": \"Naz\"\n    },\n    {\n        \"authorID\": 9,\n        \"authorNAme\": \"Johnson\"\n    },\n    {\n        \"authorID\": 10,\n        \"authorNAme\": \"JunaParita\"\n    },\n    {\n        \"authorID\": 11,\n        \"authorNAme\": \"Robot1\"\n    },\n    {\n        \"authorID\": 12,\n        \"authorNAme\": \"AuthorA\"\n    },\n    {\n        \"authorID\": 13,\n        \"authorNAme\": \"AuthorB\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "POST_insertAuth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "authName",
+									"value": "Jennifer",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8080/api/bookstore/author"
+					},
+					"response": [
+						{
+							"name": "POST_insertAuth",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "authName",
+											"value": "Jennifer",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:8080/api/bookstore/author"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 03:46:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"authorID\": 14,\n    \"authorNAme\": \"Jennifer\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GET_findAuthBYid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "authID",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8080/api/bookstore/author/ID"
+					},
+					"response": [
+						{
+							"name": "GET_findAuthBYid",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "authID",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:8080/api/bookstore/author/ID"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 03:46:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"authorID\": 2,\n    \"authorNAme\": \"Harsh\"\n}"
+						}
+					]
+				},
+				{
+					"name": "POST_updateAuthBYid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "authName",
+									"value": "I am Who amI",
+									"type": "text"
+								},
+								{
+									"key": "authID",
+									"value": "16",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8080/api/bookstore/author/update"
+					},
+					"response": [
+						{
+							"name": "POST_updateAuthBYid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "authName",
+											"value": "AuthorA",
+											"type": "text"
+										},
+										{
+											"key": "authID",
+											"value": "12",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:8080/api/bookstore/author/update"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 03:46:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"authorID\": 12,\n    \"authorNAme\": \"AuthorA\"\n}"
+						},
+						{
+							"name": "POST_updateAuthBYid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "authName",
+											"value": "I am Who amI",
+											"type": "text"
+										},
+										{
+											"key": "authID",
+											"value": "16",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:8080/api/bookstore/author/update"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 07:54:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"authorID\": 16,\n    \"authorNAme\": \"I am Who amI\"\n}"
+						}
+					]
+				},
+				{
+					"name": "POST_deleteAuthBYid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "authID",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8080/api/bookstore/author/delete"
+					},
+					"response": [
+						{
+							"name": "POST_deleteAuthBYid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "authID",
+											"value": "5",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:8080/api/bookstore/author/delete"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "36"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 03:46:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "\n \n \n book_table:0    author_table:0"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "GET_getAllBooks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://localhost:8080/api/bookstore/book"
+					},
+					"response": [
+						{
+							"name": "GET_getAllBooks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": "http://localhost:8080/api/bookstore/book"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 03:45:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"book_uid\": 1,\n        \"bookName\": \"SUmitt\",\n        \"author\": {\n            \"authorID\": 2,\n            \"authorNAme\": \"Harsh\"\n        },\n        \"isbn\": 123,\n        \"categoryId\": {\n            \"cat_id\": 4,\n            \"name\": \"Horror,Smasshh\"\n        }\n    },\n    {\n        \"book_uid\": 3,\n        \"bookName\": \"Miefwegwrgergstry\",\n        \"author\": {\n            \"authorID\": 3,\n            \"authorNAme\": \"JapanBook\"\n        },\n        \"isbn\": 5466345,\n        \"categoryId\": {\n            \"cat_id\": 2,\n            \"name\": \"TwoCAttt\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET_getBookBYcateName",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cateName",
+									"value": "TwoCAttt",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8080/api/bookstore/book/category"
+					},
+					"response": [
+						{
+							"name": "GET_getBookByCateName",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "cateName",
+											"value": "TwoCAttt",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:8080/api/bookstore/book/category"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 03:45:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"book_uid\": 3,\n        \"bookName\": \"Miefwegwrgergstry\",\n        \"author\": {\n            \"authorID\": 3,\n            \"authorNAme\": \"JapanBook\"\n        },\n        \"isbn\": 5466345,\n        \"categoryId\": {\n            \"cat_id\": 2,\n            \"name\": \"TwoCAttt\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET_getBookByAuthName",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "authName",
+									"value": "Harsh",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/bookstore/book/author",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"bookstore",
+								"book",
+								"author"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET_getBookByAuthName",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "authName",
+											"value": "Harsh",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/bookstore/book/author",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"bookstore",
+										"book",
+										"author"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 03:45:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"book_uid\": 1,\n        \"bookName\": \"SUmitt\",\n        \"author\": {\n            \"authorID\": 2,\n            \"authorNAme\": \"Harsh\"\n        },\n        \"isbn\": 123,\n        \"categoryId\": {\n            \"cat_id\": 4,\n            \"name\": \"Horror,Smasshh\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET_getBookBYcatID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "catID",
+									"value": "22",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/bookstore/book/category/ID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"bookstore",
+								"book",
+								"category",
+								"ID"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "catID",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/bookstore/book/category/ID",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"bookstore",
+										"book",
+										"category",
+										"ID"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 04:21:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"book_uid\": 3,\n    \"bookName\": \"Miefwegwrgergstry\",\n    \"author\": {\n        \"authorID\": 3,\n        \"authorNAme\": \"JapanBook\"\n    },\n    \"isbn\": 5466345,\n    \"categoryId\": {\n        \"cat_id\": 2,\n        \"name\": \"TwoCAttt\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GET_getBookBYauthID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "authID",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8080/api/bookstore/book/author/ID"
+					},
+					"response": [
+						{
+							"name": "GET_getBookBYauthID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "authID",
+											"value": "4",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:8080/api/bookstore/book/author/ID"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 05:25:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"book_uid\": 4,\n        \"bookName\": \"Quora\",\n        \"author\": {\n            \"authorID\": 4,\n            \"authorNAme\": \"Holika\"\n        },\n        \"isbn\": 707,\n        \"categoryId\": {\n            \"cat_id\": 3,\n            \"name\": \"Horror\"\n        }\n    },\n    {\n        \"book_uid\": 5,\n        \"bookName\": \"Quora\",\n        \"author\": {\n            \"authorID\": 4,\n            \"authorNAme\": \"Holika\"\n        },\n        \"isbn\": 707,\n        \"categoryId\": {\n            \"cat_id\": 3,\n            \"name\": \"Horror\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET_getBookBYuid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bookUID",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8080/api/bookstore/book/UID"
+					},
+					"response": [
+						{
+							"name": "GET_",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "bookUID",
+											"value": "3",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:8080/api/bookstore/book/UID"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 05:27:59 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"book_uid\": 3,\n        \"bookName\": \"Miefwegwrgergstry\",\n        \"author\": {\n            \"authorID\": 3,\n            \"authorNAme\": \"JapanBook\"\n        },\n        \"isbn\": 5466345,\n        \"categoryId\": {\n            \"cat_id\": 2,\n            \"name\": \"TwoCAttt\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "POST_updateBook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bookUID",
+									"value": "24",
+									"type": "text"
+								},
+								{
+									"key": "bookName",
+									"value": "delete",
+									"type": "text"
+								},
+								{
+									"key": "authName",
+									"value": "Naz",
+									"type": "text"
+								},
+								{
+									"key": "cateName",
+									"value": "Chill",
+									"type": "text"
+								},
+								{
+									"key": "isbn",
+									"value": "34",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8080/api/bookstore/book/update"
+					},
+					"response": [
+						{
+							"name": "POST_updateBook",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "bookUID",
+											"value": "17",
+											"type": "text"
+										},
+										{
+											"key": "bookName",
+											"value": "SevenT17",
+											"type": "text"
+										},
+										{
+											"key": "authName",
+											"value": "Naz",
+											"type": "text"
+										},
+										{
+											"key": "cateName",
+											"value": "Chill",
+											"type": "text"
+										},
+										{
+											"key": "isbn",
+											"value": "34",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:8080/api/bookstore/book/update"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 08:03:33 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"book_uid\": 17,\n        \"bookName\": \"SevenT17\",\n        \"author\": {\n            \"authorID\": 8,\n            \"authorNAme\": \"Naz\"\n        },\n        \"isbn\": 34,\n        \"categoryId\": {\n            \"cat_id\": 6,\n            \"name\": \"Chill\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "POST_insertBook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bookName",
+									"value": "24",
+									"type": "text"
+								},
+								{
+									"key": "authID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "catID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "isbn",
+									"value": "24",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8080/api/bookstore/book/insert"
+					},
+					"response": [
+						{
+							"name": "POST_insertBook",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "bookName",
+											"value": "24",
+											"type": "text"
+										},
+										{
+											"key": "authID",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "catID",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "isbn",
+											"value": "24",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:8080/api/bookstore/book/insert"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 19:51:44 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"book_uid\": 25,\n        \"bookName\": \"24\",\n        \"author\": {\n            \"authorID\": 1,\n            \"authorNAme\": \"sumitt123\"\n        },\n        \"isbn\": 24,\n        \"categoryId\": {\n            \"cat_id\": 1,\n            \"name\": \"ficntioonn\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "POST_deleteBook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bookUID",
+									"value": "25",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8080/api/bookstore/book/delete"
+					},
+					"response": [
+						{
+							"name": "POST_deleteBook",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "bookUID",
+											"value": "25",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:8080/api/bookstore/book/delete"
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 19:52:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "\n\n\n Book rec. deleted on::25 , Affected rows=1"
+						}
+					]
+				},
+				{
+					"name": "GET_searchBook",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bookName",
+									"value": "HoneyBeeSumitrtr",
+									"type": "text"
+								},
+								{
+									"key": "authName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "catName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "isbn",
+									"value": "44",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8080/api/bookstore/book/search"
+					},
+					"response": [
+						{
+							"name": "GET_searchBook",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "bookName",
+											"value": "HoneyBeeSumitrtr",
+											"type": "text"
+										},
+										{
+											"key": "authName",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "catName",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "isbn",
+											"value": "44",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:8080/api/bookstore/book/search"
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2024 20:28:59 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"book_uid\": 1,\n        \"bookName\": \"SUmitt\",\n        \"author\": {\n            \"authorID\": 2,\n            \"authorNAme\": \"Harsh\"\n        },\n        \"isbn\": 123,\n        \"categoryId\": {\n            \"cat_id\": 4,\n            \"name\": \"Smasshh\"\n        }\n    },\n    {\n        \"book_uid\": 3,\n        \"bookName\": \"SecondBook\",\n        \"author\": {\n            \"authorID\": 3,\n            \"authorNAme\": \"JapanBook\"\n        },\n        \"isbn\": 222,\n        \"categoryId\": {\n            \"cat_id\": 2,\n            \"name\": \"Madagas\"\n        }\n    },\n    {\n        \"book_uid\": 5,\n        \"bookName\": \"Quora\",\n        \"author\": {\n            \"authorID\": 4,\n            \"authorNAme\": \"Holika\"\n        },\n        \"isbn\": 707,\n        \"categoryId\": {\n            \"cat_id\": 3,\n            \"name\": \"Horror\"\n        }\n    },\n    {\n        \"book_uid\": 6,\n        \"bookName\": \"Quora\",\n        \"author\": {\n            \"authorID\": 9,\n            \"authorNAme\": \"Johnson\"\n        },\n        \"isbn\": 7,\n        \"categoryId\": {\n            \"cat_id\": 6,\n            \"name\": \"Chill\"\n        }\n    },\n    {\n        \"book_uid\": 7,\n        \"bookName\": \"SeventTH\",\n        \"author\": {\n            \"authorID\": 4,\n            \"authorNAme\": \"Holika\"\n        },\n        \"isbn\": 66,\n        \"categoryId\": {\n            \"cat_id\": 3,\n            \"name\": \"Horror\"\n        }\n    },\n    {\n        \"book_uid\": 8,\n        \"bookName\": \"EithentTH\",\n        \"author\": {\n            \"authorID\": 1,\n            \"authorNAme\": \"sumitt123\"\n        },\n        \"isbn\": 16,\n        \"categoryId\": {\n            \"cat_id\": 4,\n            \"name\": \"Smasshh\"\n        }\n    },\n    {\n        \"book_uid\": 9,\n        \"bookName\": \"EithentTH\",\n        \"author\": {\n            \"authorID\": 1,\n            \"authorNAme\": \"sumitt123\"\n        },\n        \"isbn\": 16,\n        \"categoryId\": {\n            \"cat_id\": 1,\n            \"name\": \"ficntioonn\"\n        }\n    },\n    {\n        \"book_uid\": 10,\n        \"bookName\": \"HoneyBee\",\n        \"author\": {\n            \"authorID\": 3,\n            \"authorNAme\": \"JapanBook\"\n        },\n        \"isbn\": 448,\n        \"categoryId\": {\n            \"cat_id\": 8,\n            \"name\": \"Apple\"\n        }\n    },\n    {\n        \"book_uid\": 11,\n        \"bookName\": \"HoneyBee\",\n        \"author\": {\n            \"authorID\": 3,\n            \"authorNAme\": \"JapanBook\"\n        },\n        \"isbn\": 448,\n        \"categoryId\": {\n            \"cat_id\": 8,\n            \"name\": \"Apple\"\n        }\n    },\n    {\n        \"book_uid\": 12,\n        \"bookName\": \"hbase\",\n        \"author\": {\n            \"authorID\": 11,\n            \"authorNAme\": \"Robot1\"\n        },\n        \"isbn\": 30,\n        \"categoryId\": {\n            \"cat_id\": 12,\n            \"name\": \"Test008\"\n        }\n    },\n    {\n        \"book_uid\": 13,\n        \"bookName\": \"Abase\",\n        \"author\": {\n            \"authorID\": 7,\n            \"authorNAme\": \"Shiela\"\n        },\n        \"isbn\": 80,\n        \"categoryId\": {\n            \"cat_id\": 9,\n            \"name\": \"Cat\"\n        }\n    },\n    {\n        \"book_uid\": 14,\n        \"bookName\": \"xyv\",\n        \"author\": {\n            \"authorID\": 2,\n            \"authorNAme\": \"Harsh\"\n        },\n        \"isbn\": 80,\n        \"categoryId\": {\n            \"cat_id\": 6,\n            \"name\": \"Chill\"\n        }\n    },\n    {\n        \"book_uid\": 15,\n        \"bookName\": \"Ukraine\",\n        \"author\": {\n            \"authorID\": 2,\n            \"authorNAme\": \"Harsh\"\n        },\n        \"isbn\": 80,\n        \"categoryId\": {\n            \"cat_id\": 6,\n            \"name\": \"Chill\"\n        }\n    },\n    {\n        \"book_uid\": 16,\n        \"bookName\": \"Aussie\",\n        \"author\": {\n            \"authorID\": 2,\n            \"authorNAme\": \"Harsh\"\n        },\n        \"isbn\": 44,\n        \"categoryId\": {\n            \"cat_id\": 13,\n            \"name\": \"Test12\"\n        }\n    },\n    {\n        \"book_uid\": 17,\n        \"bookName\": \"SevenT17\",\n        \"author\": {\n            \"authorID\": 8,\n            \"authorNAme\": \"Naz\"\n        },\n        \"isbn\": 34,\n        \"categoryId\": {\n            \"cat_id\": 6,\n            \"name\": \"Chill\"\n        }\n    },\n    {\n        \"book_uid\": 18,\n        \"bookName\": \"Aussie\",\n        \"author\": {\n            \"authorID\": 7,\n            \"authorNAme\": \"Shiela\"\n        },\n        \"isbn\": 44,\n        \"categoryId\": {\n            \"cat_id\": 13,\n            \"name\": \"Test12\"\n        }\n    },\n    {\n        \"book_uid\": 19,\n        \"bookName\": \"NINEteeth\",\n        \"author\": {\n            \"authorID\": 16,\n            \"authorNAme\": \"I am Who amI\"\n        },\n        \"isbn\": 34,\n        \"categoryId\": {\n            \"cat_id\": 28,\n            \"name\": \"IamWhoIam\"\n        }\n    },\n    {\n        \"book_uid\": 20,\n        \"bookName\": \"Kafka\",\n        \"author\": {\n            \"authorID\": 7,\n            \"authorNAme\": \"Shiela\"\n        },\n        \"isbn\": 101,\n        \"categoryId\": {\n            \"cat_id\": 26,\n            \"name\": \"Test007\"\n        }\n    },\n    {\n        \"book_uid\": 21,\n        \"bookName\": \"SevenT17\",\n        \"author\": {\n            \"authorID\": 8,\n            \"authorNAme\": \"Naz\"\n        },\n        \"isbn\": 34,\n        \"categoryId\": {\n            \"cat_id\": 6,\n            \"name\": \"Chill\"\n        }\n    },\n    {\n        \"book_uid\": 23,\n        \"bookName\": \"23LastAdded\",\n        \"author\": {\n            \"authorID\": 1,\n            \"authorNAme\": \"sumitt123\"\n        },\n        \"isbn\": 23,\n        \"categoryId\": {\n            \"cat_id\": 1,\n            \"name\": \"ficntioonn\"\n        }\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
