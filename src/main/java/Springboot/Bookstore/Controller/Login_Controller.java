@@ -1,13 +1,14 @@
 package Springboot.Bookstore.Controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping(value = "/api/bookstore")
 public class Login_Controller {
 
-/////////////// GET         // ready-made HTML template here
+/////////////// GET       + JSP VIEW     // ready-made HTML template here
     @RequestMapping(value = "/login0", method = RequestMethod.GET)
     // no @ResponseBody needed
     public String login_start_html(){
@@ -32,13 +33,12 @@ public class Login_Controller {
         return uid;
     }
 
-
-
-///////////////     MODEL   introduction
-    @RequestMapping(value = "/login3")  //// login?user_id=xyz if we dont put (value="user_id"), it takes as default to login?name=xyz
-    public String login3(@RequestParam String uid){
-        System.out.println("\n\n User entered:" + uid);
-        return uid;
+///////////////     MODEL   introduction   + JSP VIEW
+    @RequestMapping(value = "/login3", method = RequestMethod.GET)
+    public String login3(@RequestParam(value="uid") String uid, ModelMap modelMap){
+        modelMap.put( "uid_holder",    uid );  // <uid_holder>: this value is defined in login3.jsp file as ${uid_holder}
+        System.out.println("\n\n User entered:" + uid + modelMap.toString());
+        return "login3";  //this is returning login3.jsp  RETURNS(VIEW)
     }
 
 

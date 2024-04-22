@@ -18,20 +18,18 @@ public class BookstoreApplication {
                 "   JSP:    http://localhost:8080/api/bookstore/jsp_view_controller/welcome0   \n"  +
                 "   JSP:    http://localhost:8080/api/bookstore/jsp_view_controller/welcome2                =returns (View) without @ResponseBody \n" +
                 "   JSP:    http://localhost:8080/api/bookstore/jsp_view_controller/jspredirect?jsp=login   =returns (View) without @ResponseBody \n" +
-
+                "           Available options =/jspredirect?jsp=jsp_welcome1   /jspredirect?jsp=jsp_welcome2        /jspredirect?jsp=htmlintro  \n" +
                 "   ConfigurationProperties:    http://localhost:8080/api/bookstore/ConfigurationProperties =returns (String) with @ResponseBody \n" +
-                "   Login0 (Template):          http://localhost:8080/api/bookstore/login0           (GET)  =returns (View) without @ResponseBody \n"  +
-                "   Login1 with Param:          http://localhost:8080/api/bookstore/login1?uid=xyz   (GET)  =returns (String) with @ResponseBody \n"  +
-                "   Login2 with Param:          http://localhost:8080/api/bookstore/login2?uid=xyz   (POST) =returns (String) with @ResponseBody \n"  +
-                "   Login3 with Param:          http://localhost:8080/api/bookstore/login3?uid=xyz   (POST) =returns (String) with @ResponseBody \n"
+                "   Login0 (Template): GET      http://localhost:8080/api/bookstore/login0                  =returns (View) without @ResponseBody \n"  +
+                "   Login1 with Param: GET      http://localhost:8080/api/bookstore/login1?uid=xyz          =returns (String) with @ResponseBody \n"  +
+                "   Login2 with Param: POST     http://localhost:8080/api/bookstore/login2?uid=xyz          =returns (String) with @ResponseBody \n"  +
+                "   Login3 MODEL MAP:  GET      http://localhost:8080/api/bookstore/login3?uid=SUmirgnrevun =returns (VIEW) without @ResponseBody \n"
 
 
 
 
 
         );
-
-
 
     }
 
