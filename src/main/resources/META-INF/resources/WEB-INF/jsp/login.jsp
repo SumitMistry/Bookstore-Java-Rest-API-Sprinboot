@@ -46,17 +46,24 @@ button {
 </head>
 <body>
     <center> <h1> Book Login Form </h1> </center>
-    <form>
+    <pre> ${message} </pre>
+
+    <form method="post">
         <div class="container">
             <label>Email : </label>
-            <input type="text" placeholder="Enter Email" name="username" required>
+            <input type="text" placeholder="Enter Email" name="uid" required>
             <label>Password : </label>
-            <input type="password" placeholder="Enter Password" name="password" required>
+            <input type="password" placeholder="Enter Password" name="pass" required>
             <button type="submit">Login</button>
             <input type="checkbox" checked="checked"> Remember me
             <button type="button" class="cancelbtn"> Cancel</button>
             Forgot <a href="#"> password? </a>
         </div>
     </form>
+
+        <p>
+        Hint1: uid must have @
+        <p>
+        Hint2: pass must be 4 length
 </body>
 </html>

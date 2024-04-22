@@ -14,7 +14,7 @@
             Hint1: uid must have @
 
             <p>
-            Hint1: pass must be 4 length
+            Hint2: pass must be 4 length
 
 </body>
 </html>

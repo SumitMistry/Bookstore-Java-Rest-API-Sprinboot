@@ -93,7 +93,35 @@ public class Login_Controller {
 
     }
 
+///////////////     HTML Template  + JSP VIEW  + GET() + POST() + ModelMapping
+    ///////////     GET specific below
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login_get(){
+        logger_controller.info("    Running: login_get()");
+        return "login";  //this is returning login4.jsp  RETURNS(VIEW).
+        // This login4.jsp form has <Form method= "post">
+    }
+    // same as above method, but handling only POST side
+    ///////////     POST specific below
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public String login_post(@RequestParam String uid, @RequestParam String pass, ModelMap modelMap){
 
-//////////////     MODEL + Front Controller + JSP VIEW
+        // Authentication BASIC logic set in SERVICES:
+        boolean goAheadOrNOT = login_authentication_services.authenticate_basic1(uid,pass);
+        logger_controller.info("    Running: login_post()+  Authentication Validation indicator" + goAheadOrNOT);
+        if(goAheadOrNOT == false){
+            modelMap.put( "message", "AUTH FAILED ");
+            return "login";
+        }
+        else{
+            modelMap.put( "message", "Successful...");
+            modelMap.put("uid",uid);
+            modelMap.put("pass",pass);
+            logger_controller.info("    uid="+ uid+"   pass="+pass + modelMap );
+            return "login4_post";  //this is returning logn4_post.jsp  RETURNS(VIEW).
+        }
+
+    }
+
 
 }

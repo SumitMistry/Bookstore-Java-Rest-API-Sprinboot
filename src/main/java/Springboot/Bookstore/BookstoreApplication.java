@@ -28,7 +28,8 @@ public class BookstoreApplication {
                     "   Login1 with Param: GET      http://localhost:8080/api/bookstore/login1?uid=xyz          =returns (String) with @ResponseBody \n"  +
                     "   Login2 with Param: POST     http://localhost:8080/api/bookstore/login2?uid=xyz          =returns (String) with @ResponseBody \n"  +
                     "   Login3 MODEL intro: GET     http://localhost:8080/api/bookstore/login3?uid=SUmirgnrevun =returns (VIEW) without @ResponseBody \n"  +
-                    "   Login4 JSP+MODEL+GET+POST   http://localhost:8080/api/bookstore/login4                  =returns (VIEW) without @ResponseBody \n"
+                    "   Login4 JSP+MODEL+GET+POST   http://localhost:8080/api/bookstore/login4                  =returns (VIEW) without @ResponseBody \n"  +
+                    "   Login  JSP+MODEL+GET+POST   http://localhost:8080/api/bookstore/login                   =returns (VIEW) without @ResponseBody \n"
 
 
 
