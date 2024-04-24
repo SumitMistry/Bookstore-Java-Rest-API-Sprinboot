@@ -93,10 +93,12 @@ public class Login_Controller {
 
     }
 
+
+///////////////     FINAL LOGIN....below / login
 ///////////////     HTML Template  + JSP VIEW  + GET() + POST() + ModelMapping
     ///////////     GET specific below
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String login_get(){
+    public String get_login_page(){
         logger_controller.info("    Running: login_get()");
         return "login";  //this is returning login4.jsp  RETURNS(VIEW).
         // This login4.jsp form has <Form method= "post">
@@ -104,7 +106,12 @@ public class Login_Controller {
     // same as above method, but handling only POST side
     ///////////     POST specific below
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login_post(@RequestParam String uid, @RequestParam String pass, ModelMap modelMap){
+    public String actual_login_happens_here(@RequestParam(value="uid") String uid,
+                                            // @RequestParam annotation binds Servlet request(from HTML) parameters to method argument
+                                            // @RequestParam annotation enables spring to extract input data
+                                            // @RequestParam is used to extract individual parameter values from the request URL or submitted form data
+                                            @RequestParam(value = "pass") String pass,
+                                            ModelMap modelMap){
 
         // Authentication BASIC logic set in SERVICES:
         boolean goAheadOrNOT = login_authentication_services.authenticate_basic1(uid,pass);

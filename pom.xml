@@ -24,7 +24,8 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
-<!-- These 2 dependencies for JSP page load for view, mandatory-->
+<!-- These 2 dependencies for JSP page load for view, mandatory
+	if you find this error: No static resource WEB-INF////..... then this means this dependency not correctly added.-->
 							<dependency>
 								<groupId>org.apache.tomcat.embed</groupId>
 								<artifactId>tomcat-embed-jasper</artifactId>

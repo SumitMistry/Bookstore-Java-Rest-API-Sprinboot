@@ -35,11 +35,11 @@ public class Author_Controller {
     // @RequestParam use ---> http://localhost:8080/api/bookstore/author/ID?authID=4
     @GetMapping("/author/ID") // GET find by ID .... POSTMAN<int ID>
     @ResponseBody
-    public ResponseEntity<AuthorModel> findAuthBYid1(@RequestParam(value = "authID") int authID) {
+    public ResponseEntity<AuthorModel> findAuthBYid1(@RequestParam(value = "authID") int authID) {  // --->@RequestParam is used to extract individual parameter values from the request URL or submitted form data
         AuthorModel a1 = authService1.findAuthBYid(authID);
         return new ResponseEntity<AuthorModel>(a1, HttpStatus.OK);
     }
-// Difference between @PathVariable------ vs ------  @RequestParam
+// Difference between @PathVariable------ vs ------  @RequestParam  ---->@RequestParam is used to extract individual parameter values from the request URL or submitted form data
     // @PathVariable use ---> http://localhost:8080/api/bookstore/author/ID/4
     @GetMapping("/author/ID/{authID}") // GET find by ID .... POSTMAN<int ID>
     @ResponseBody
